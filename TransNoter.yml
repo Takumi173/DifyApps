@@ -11,6 +11,11 @@ workflow:
   conversation_variables: []
   environment_variables:
   - description: ''
+    id: 35d2efae-1ab5-42fa-a16d-b02e7fed56f1
+    name: Notion_Master_DB_ID
+    value: ''
+    value_type: secret
+  - description: ''
     id: 46f2a735-3515-4576-b2d4-4c0fb5745556
     name: Notion_database_ID
     value: ''
@@ -485,7 +490,7 @@ workflow:
     nodes:
     - data:
         desc: ''
-        selected: true
+        selected: false
         title: 開始
         type: start
         variables:
@@ -514,7 +519,7 @@ workflow:
       positionAbsolute:
         x: -370
         y: -98.42857142857147
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -980,7 +985,7 @@ workflow:
           max_connect_timeout: 0
           max_read_timeout: 0
           max_write_timeout: 0
-        title: HTTPリクエスト
+        title: Get HTTP header
         type: http-request
         url: '{{#1729470775843.URL#}}'
         variables: []
@@ -1236,26 +1241,30 @@ workflow:
       width: 244
     - data:
         code: "def main(arg1: str, arg2: str, arg3: str, arg4: list[str], arg5: str,\
-          \ arg6: str, Notion_database_ID: str) -> dict:\n    children = []\n    children.append({\"\
-          object\": 'block', \"type\": 'heading_1', \"heading_1\": {\"rich_text\"\
-          : [{\"text\": {\"content\": \"要点\"}}]}})\n    children.append({\"object\"\
-          : 'block', \"type\": 'paragraph', \"paragraph\": {\"rich_text\": [{\"text\"\
-          : {\"content\": arg3}}]}})\n    children.append({\"object\": 'block', \"\
-          type\": 'heading_1', \"heading_1\": {\"rich_text\": [{\"text\": {\"content\"\
-          : \"全文翻訳\"}}]}})\n    for string in arg4:\n        children.append({\"object\"\
-          : 'block', \"type\": 'paragraph', \"paragraph\": {\"rich_text\": [{\"text\"\
-          : {\"content\": string}}]}})\n\n    json_data = {\n        \"parent\": {\"\
-          database_id\": Notion_database_ID},\n        \"properties\": {\n       \
-          \     \"title\": {\n                \"title\": [\n                    {\n\
-          \                        \"text\": {\n                            \"content\"\
-          : arg1\n                        }\n                    }\n             \
-          \   ]\n            },\n            \"Summary\": {\n                \"rich_text\"\
-          : [\n                    {\n                        \"text\": {\n      \
-          \                      \"content\": arg2\n                        }\n  \
-          \                  }\n                ]\n            },\n            \"\
-          URL\": {\n                \"url\": arg5\n            },\n            \"\
-          ExecutedDate\": {\n                \"date\": {\n                    \"start\"\
-          : arg6\n                }\n            }\n        },\n        \"children\"\
+          \ arg6: str, Notion_database_ID: str, Notion_Master_DB_ID: str) -> dict:\n\
+          \    children = []\n    children.append({\"object\": 'block', \"type\":\
+          \ 'heading_1', \"heading_1\": {\"rich_text\": [{\"text\": {\"content\":\
+          \ \"要点\"}}]}})\n    children.append({\"object\": 'block', \"type\": 'paragraph',\
+          \ \"paragraph\": {\"rich_text\": [{\"text\": {\"content\": arg3}}]}})\n\
+          \    children.append({\"object\": 'block', \"type\": 'heading_1', \"heading_1\"\
+          : {\"rich_text\": [{\"text\": {\"content\": \"全文翻訳\"}}]}})\n    for string\
+          \ in arg4:\n        children.append({\"object\": 'block', \"type\": 'paragraph',\
+          \ \"paragraph\": {\"rich_text\": [{\"text\": {\"content\": string}}]}})\n\
+          \n    json_data = {\n        \"parent\": {\"database_id\": Notion_database_ID},\n\
+          \        \"properties\": {\n            \"title\": {\n                \"\
+          title\": [\n                    {\n                        \"text\": {\n\
+          \                            \"content\": arg1\n                       \
+          \ }\n                    }\n                ]\n            },\n        \
+          \    \"Summary\": {\n                \"rich_text\": [\n                \
+          \    {\n                        \"text\": {\n                          \
+          \  \"content\": arg2\n                        }\n                    }\n\
+          \                ]\n            },\n            \"URL\": {\n           \
+          \     \"url\": arg5\n            },\n            \"ExecutedDate\": {\n \
+          \               \"date\": {\n                    \"start\": arg6\n     \
+          \           }\n            },\n            \"Relation\":{\n            \
+          \    \"relation\":[\n                    {\n                        \"id\"\
+          :Notion_Master_DB_ID\n                    }\n                ]\n       \
+          \         \n            }            \n        },\n        \"children\"\
           :children\n        \n    }\n\n    return {'result': json.dumps(json_data,\
           \ ensure_ascii=False)}"
         code_language: python3
@@ -1264,7 +1273,7 @@ workflow:
           result:
             children: null
             type: string
-        selected: false
+        selected: true
         title: Payload Generation
         type: code
         variables:
@@ -1296,15 +1305,19 @@ workflow:
           - env
           - Notion_database_ID
           variable: Notion_database_ID
+        - value_selector:
+          - env
+          - Notion_Master_DB_ID
+          variable: Notion_Master_DB_ID
       height: 54
       id: '1729762470082'
       position:
-        x: 2640.208427008884
+        x: 2638.208427008884
         y: -98.42857142857147
       positionAbsolute:
-        x: 2640.208427008884
+        x: 2638.208427008884
         y: -98.42857142857147
-      selected: false
+      selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -1331,7 +1344,7 @@ workflow:
           max_connect_timeout: 0
           max_read_timeout: 0
           max_write_timeout: 0
-        title: HTTPリクエスト 2 (1)
+        title: Post to Notion
         type: http-request
         url: https://api.notion.com/v1/pages
         variables: []
@@ -1535,6 +1548,6 @@ workflow:
       type: custom
       width: 244
     viewport:
-      x: 580.4670300219515
-      y: 325.7022244581505
-      zoom: 0.5000000000000004
+      x: -1798.3299698658375
+      y: 331.03540607310714
+      zoom: 0.7578582832552
