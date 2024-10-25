@@ -494,7 +494,7 @@ workflow:
           - document
           allowed_file_upload_methods:
           - local_file
-          label: ファイルの内容を日本語で要約する
+          label: ファイルを日本語で要約する（注意：アップロードされたファイルは削除できません）
           max_length: 5
           options: []
           required: false
@@ -514,7 +514,7 @@ workflow:
       positionAbsolute:
         x: -370
         y: -98.42857142857147
-      selected: false
+      selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -1026,7 +1026,7 @@ workflow:
       positionAbsolute:
         x: 257.2277171769647
         y: 231.24378614954992
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
