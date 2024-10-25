@@ -490,7 +490,7 @@ workflow:
     nodes:
     - data:
         desc: ''
-        selected: false
+        selected: true
         title: 開始
         type: start
         variables:
@@ -505,7 +505,7 @@ workflow:
           required: false
           type: file
           variable: File
-        - label: Web記事を日本語で要約する
+        - label: URLを入力（Web記事のテキストを日本語で要約）
           max_length: 65536
           options: []
           required: false
@@ -519,7 +519,7 @@ workflow:
       positionAbsolute:
         x: -370
         y: -98.42857142857147
-      selected: false
+      selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -1273,7 +1273,7 @@ workflow:
           result:
             children: null
             type: string
-        selected: true
+        selected: false
         title: Payload Generation
         type: code
         variables:
@@ -1317,7 +1317,7 @@ workflow:
       positionAbsolute:
         x: 2638.208427008884
         y: -98.42857142857147
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -1548,6 +1548,6 @@ workflow:
       type: custom
       width: 244
     viewport:
-      x: -1798.3299698658375
-      y: 331.03540607310714
+      x: 956.6700301341625
+      y: 516.0354060731072
       zoom: 0.7578582832552
