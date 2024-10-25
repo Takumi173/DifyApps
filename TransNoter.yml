@@ -485,7 +485,7 @@ workflow:
     nodes:
     - data:
         desc: ''
-        selected: false
+        selected: true
         title: 開始
         type: start
         variables:
@@ -494,7 +494,7 @@ workflow:
           - document
           allowed_file_upload_methods:
           - local_file
-          label: ファイルを日本語で要約する（注意：アップロードされたファイルは削除できません）
+          label: ファイルを日本語で要約する（注意：アップロードしたファイルは削除できません）
           max_length: 5
           options: []
           required: false
