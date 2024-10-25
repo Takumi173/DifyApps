@@ -246,18 +246,6 @@ workflow:
     - data:
         isInIteration: false
         sourceType: if-else
-        targetType: code
-      id: 1729745883840-false-1729731601814-target
-      selected: false
-      source: '1729745883840'
-      sourceHandle: 'false'
-      target: '1729731601814'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: if-else
         targetType: if-else
       id: 1729731502683-true-1729748246206-target
       selected: false
@@ -404,6 +392,7 @@ workflow:
         sourceType: code
         targetType: code
       id: 1729777611576-source-1729762470082-target
+      selected: false
       source: '1729777611576'
       sourceHandle: source
       target: '1729762470082'
@@ -415,6 +404,7 @@ workflow:
         sourceType: llm
         targetType: code
       id: 1729681971224-source-1729785130564-target
+      selected: false
       source: '1729681971224'
       sourceHandle: source
       target: '1729785130564'
@@ -426,6 +416,7 @@ workflow:
         sourceType: code
         targetType: code
       id: 1729785130564-source-1729762470082-target
+      selected: false
       source: '1729785130564'
       sourceHandle: source
       target: '1729762470082'
@@ -437,6 +428,7 @@ workflow:
         sourceType: code
         targetType: http-request
       id: 1729762470082-source-17297626682050-target
+      selected: false
       source: '1729762470082'
       sourceHandle: source
       target: '17297626682050'
@@ -448,6 +440,7 @@ workflow:
         sourceType: tool
         targetType: if-else
       id: 1729744231103-source-1729816442472-target
+      selected: false
       source: '1729744231103'
       sourceHandle: source
       target: '1729816442472'
@@ -459,6 +452,7 @@ workflow:
         sourceType: if-else
         targetType: variable-aggregator
       id: 1729816442472-true-1729728469370-target
+      selected: false
       source: '1729816442472'
       sourceHandle: 'true'
       target: '1729728469370'
@@ -470,6 +464,7 @@ workflow:
         sourceType: if-else
         targetType: code
       id: 1729816442472-false-1729816543996-target
+      selected: false
       source: '1729816442472'
       sourceHandle: 'false'
       target: '1729816543996'
@@ -481,16 +476,39 @@ workflow:
         sourceType: code
         targetType: end
       id: 1729816543996-source-1729816498398-target
+      selected: false
       source: '1729816543996'
       sourceHandle: source
       target: '1729816498398'
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: code
+      id: 1729745883840-false-17298456521160-target
+      source: '1729745883840'
+      sourceHandle: 'false'
+      target: '17298456521160'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: end
+      id: 17298456521160-source-1729845731599-target
+      source: '17298456521160'
+      sourceHandle: source
+      target: '1729845731599'
+      targetHandle: target
+      type: custom
+      zIndex: 0
     nodes:
     - data:
         desc: ''
-        selected: true
+        selected: false
         title: 開始
         type: start
         variables:
@@ -519,7 +537,7 @@ workflow:
       positionAbsolute:
         x: -370
         y: -98.42857142857147
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -791,7 +809,7 @@ workflow:
         - value_selector:
           - '1729731601814'
           - result
-          variable: Output
+          variable: result
         selected: false
         title: End
         type: end
@@ -809,8 +827,8 @@ workflow:
       type: custom
       width: 244
     - data:
-        code: "def main() -> dict:\n    message = \"このサイトは読み取れません\"\n    return {'result':\
-          \ message}"
+        code: "def main() -> dict:\n    message = \"Error: 指定されたURLのテキストは読み取れません。\"\
+          \n    return {'result': message}"
         code_language: python3
         desc: ''
         outputs:
@@ -1547,7 +1565,56 @@ workflow:
       targetPosition: left
       type: custom
       width: 244
+    - data:
+        code: "def main() -> dict:\n    message = \"Error: 指定されたURLはHTML形式ではありません。PDF等のURLを指定している場合は、ファイルアップロード機能で対象のURLを入力してください。\"\
+          \n    return {'result': message}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: Error Message - Non-HTML
+        type: code
+        variables: []
+      height: 54
+      id: '17298456521160'
+      position:
+        x: 257.2277171769647
+        y: 526.0484378041743
+      positionAbsolute:
+        x: 257.2277171769647
+        y: 526.0484378041743
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: Non-HTML
+        outputs:
+        - value_selector:
+          - '17298456521160'
+          - result
+          variable: result
+        selected: false
+        title: END
+        type: end
+      height: 118
+      id: '1729845731599'
+      position:
+        x: 257.2277171769647
+        y: 615.0359149853223
+      positionAbsolute:
+        x: 257.2277171769647
+        y: 615.0359149853223
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
     viewport:
-      x: 956.6700301341625
-      y: 516.0354060731072
+      x: -1340.72002146256
+      y: 457.80380434230784
       zoom: 0.7578582832552
