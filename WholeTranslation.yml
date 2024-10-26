@@ -1,0 +1,2351 @@
+app:
+  description: ''
+  icon: 🧐
+  icon_background: '#D1E9FF'
+  mode: workflow
+  name: WholeTranslation
+  use_icon_as_answer_icon: false
+kind: app
+version: 0.1.2
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: eb4f50cc-e029-4fdf-a7d5-279e7e807187
+    name: Notion_API_Key
+    value: ''
+    value_type: secret
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: iteration
+      id: 1717916867969-source-1729916311472-target
+      selected: false
+      source: '1717916867969'
+      sourceHandle: source
+      target: '1729916311472'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: code
+        targetType: llm
+      id: 1729923583504-source-1729916335283-target
+      selected: false
+      source: '1729923583504'
+      sourceHandle: source
+      target: '1729916335283'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: iteration-start
+        targetType: http-request
+      id: 1729916311472start-source-1729923521277-target
+      selected: false
+      source: 1729916311472start
+      sourceHandle: source
+      target: '1729923521277'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: code
+        targetType: http-request
+      id: 1729925022624-source-1729924625068-target
+      selected: false
+      source: '1729925022624'
+      sourceHandle: source
+      target: '1729924625068'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: iteration
+      id: 17299294575790-source-1729929504443-target
+      selected: false
+      source: '17299294575790'
+      sourceHandle: source
+      target: '1729929504443'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1729929504443'
+        sourceType: iteration-start
+        targetType: http-request
+      id: 1729929504443start-source-1729929543735-target
+      selected: false
+      source: 1729929504443start
+      sourceHandle: source
+      target: '1729929543735'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: http-request
+        targetType: http-request
+      id: 1729923521277-source-1729924351212-target
+      selected: false
+      source: '1729923521277'
+      sourceHandle: source
+      target: '1729924351212'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: http-request
+        targetType: code
+      id: 1729924351212-source-1729923583504-target
+      selected: false
+      source: '1729924351212'
+      sourceHandle: source
+      target: '1729923583504'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: question-classifier
+        targetType: code
+      id: 1729943839757-1-1729925022624-target
+      selected: false
+      source: '1729943839757'
+      sourceHandle: '1'
+      target: '1729925022624'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: question-classifier
+        targetType: code
+      id: 1729943839757-2-1729925022624-target
+      selected: false
+      source: '1729943839757'
+      sourceHandle: '2'
+      target: '1729925022624'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: document-extractor
+      id: 1729949478298-false-1729949415248-target
+      selected: false
+      source: '1729949478298'
+      sourceHandle: 'false'
+      target: '1729949415248'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: http-request
+      id: 1729949631527-source-17299496766680-target
+      selected: false
+      source: '1729949631527'
+      sourceHandle: source
+      target: '17299496766680'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: llm
+        targetType: question-classifier
+      id: 1729939516626-source-1729943839757-target
+      selected: false
+      source: '1729939516626'
+      sourceHandle: source
+      target: '1729943839757'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: http-request
+        targetType: http-request
+      id: 1729924625068-source-1729924642144-target
+      selected: false
+      source: '1729924625068'
+      sourceHandle: source
+      target: '1729924642144'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729929504443'
+        sourceType: http-request
+        targetType: code
+      id: 1729929543735-source-1729930031571-target
+      selected: false
+      source: '1729929543735'
+      sourceHandle: source
+      target: '1729930031571'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729929504443'
+        sourceType: code
+        targetType: http-request
+      id: 1729930031571-source-1729930610626-target
+      selected: false
+      source: '1729930031571'
+      sourceHandle: source
+      target: '1729930610626'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: http-request
+      id: 1729949581607-source-1729949631527-target
+      selected: false
+      source: '1729949581607'
+      sourceHandle: source
+      target: '1729949631527'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: code
+        targetType: llm
+      id: 1729923583504-source-1729939516626-target
+      selected: false
+      source: '1729923583504'
+      sourceHandle: source
+      target: '1729939516626'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1729916311472'
+        sourceType: llm
+        targetType: question-classifier
+      id: 1729916335283-source-1729943839757-target
+      selected: false
+      source: '1729916335283'
+      sourceHandle: source
+      target: '1729943839757'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '17299544163660'
+        sourceType: iteration-start
+        targetType: http-request
+      id: 1729954416366start-source-1729954416366017299544163670-target
+      selected: false
+      source: 1729954416366start
+      sourceHandle: source
+      target: '1729954416366017299544163670'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '17299544163660'
+        sourceType: http-request
+        targetType: code
+      id: 1729954416366017299544163670-source-1729954416366017299544163671-target
+      selected: false
+      source: '1729954416366017299544163670'
+      sourceHandle: source
+      target: '1729954416366017299544163671'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '17299544163660'
+        sourceType: code
+        targetType: http-request
+      id: 1729954416366017299544163671-source-1729954416366017299544163672-target
+      selected: false
+      source: '1729954416366017299544163671'
+      sourceHandle: source
+      target: '1729954416366017299544163672'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '17299544196660'
+        sourceType: iteration-start
+        targetType: http-request
+      id: 1729954419666start-source-1729954419666017299544196660-target
+      selected: false
+      source: 1729954419666start
+      sourceHandle: source
+      target: '1729954419666017299544196660'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '17299544196660'
+        sourceType: http-request
+        targetType: code
+      id: 1729954419666017299544196660-source-1729954419666017299544196661-target
+      selected: false
+      source: '1729954419666017299544196660'
+      sourceHandle: source
+      target: '1729954419666017299544196661'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '17299544196660'
+        sourceType: code
+        targetType: http-request
+      id: 1729954419666017299544196661-source-1729954419666017299544196662-target
+      selected: false
+      source: '1729954419666017299544196661'
+      sourceHandle: source
+      target: '1729954419666017299544196662'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: if-else
+      id: 1729929504443-source-1729954509625-target
+      selected: false
+      source: '1729929504443'
+      sourceHandle: source
+      target: '1729954509625'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: iteration
+      id: 1729954509625-false-17299544163660-target
+      selected: false
+      source: '1729954509625'
+      sourceHandle: 'false'
+      target: '17299544163660'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: if-else
+      id: 17299544163660-source-1729954522465-target
+      selected: false
+      source: '17299544163660'
+      sourceHandle: source
+      target: '1729954522465'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: iteration
+      id: 1729954522465-false-17299544196660-target
+      selected: false
+      source: '1729954522465'
+      sourceHandle: 'false'
+      target: '17299544196660'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: http-request
+      id: 17299575956060-source-17299576020260-target
+      selected: false
+      source: '17299575956060'
+      sourceHandle: source
+      target: '17299576020260'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: variable-aggregator
+      id: 1729949478298-true-1729958760241-target
+      selected: false
+      source: '1729949478298'
+      sourceHandle: 'true'
+      target: '1729958760241'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: document-extractor
+        targetType: variable-aggregator
+      id: 1729949415248-source-1729958760241-target
+      selected: false
+      source: '1729949415248'
+      sourceHandle: source
+      target: '1729958760241'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1729958760241-source-1729949581607-target
+      selected: false
+      source: '1729958760241'
+      sourceHandle: source
+      target: '1729949581607'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: code
+      id: 17299496766680-source-1717916867969-target
+      selected: false
+      source: '17299496766680'
+      sourceHandle: source
+      target: '1717916867969'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: http-request
+      id: 1729916311472-source-17299575956060-target
+      selected: false
+      source: '1729916311472'
+      sourceHandle: source
+      target: '17299575956060'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: code
+      id: 17299576020260-source-17299294575790-target
+      selected: false
+      source: '17299576020260'
+      sourceHandle: source
+      target: '17299294575790'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: code
+      id: 1711067409646-source-1729959658116-target
+      selected: false
+      source: '1711067409646'
+      sourceHandle: source
+      target: '1729959658116'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: 1729959658116-source-17299612498640-target
+      selected: false
+      source: '1729959658116'
+      sourceHandle: source
+      target: '17299612498640'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: if-else
+      id: 17299612498640-source-1729949478298-target
+      selected: false
+      source: '17299612498640'
+      sourceHandle: source
+      target: '1729949478298'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1729954509625-true-17299618939050-target
+      source: '1729954509625'
+      sourceHandle: 'true'
+      target: '17299618939050'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1729954522465-true-17299618939050-target
+      source: '1729954522465'
+      sourceHandle: 'true'
+      target: '17299618939050'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: http-request
+      id: 17299544196660-source-17299618939050-target
+      source: '17299544196660'
+      sourceHandle: source
+      target: '17299618939050'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: end
+      id: 17299618939050-source-1711068257370-target
+      source: '17299618939050'
+      sourceHandle: source
+      target: '1711068257370'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          label: InputText
+          max_length: 100000
+          options: []
+          required: false
+          type: paragraph
+          variable: InputText
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          label: File
+          max_length: 48
+          options: []
+          required: false
+          type: file
+          variable: File
+        - label: OutputParentURL
+          max_length: 256
+          options: []
+          required: true
+          type: text-input
+          variable: OutputParentURL
+        - label: MasterPageID
+          max_length: 48
+          options: []
+          required: true
+          type: text-input
+          variable: MasterPageID
+      dragging: false
+      height: 168
+      id: '1711067409646'
+      position:
+        x: 1395.714285714286
+        y: 502.3571428571429
+      positionAbsolute:
+        x: 1395.714285714286
+        y: 502.3571428571429
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs: []
+        selected: false
+        title: End
+        type: end
+      height: 54
+      id: '1711068257370'
+      position:
+        x: 5043.831717504549
+        y: 691.3909794585869
+      positionAbsolute:
+        x: 5043.831717504549
+        y: 691.3909794585869
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(Target1: str,  CorrTbl1: str, Org_itr_block: str, Trn_itr_block:\
+          \ str, Heading_block: str) -> dict:\n    import re\n    Chunk_size = 15000\n\
+          \n\n    Target = Target1\n\n\n    CorrTbl = CorrTbl1\n\n    # Original text\
+          \ block\n    data = json.loads(Org_itr_block)\n    id_value = data['results'][0]['id']\n\
+          \    id_without_hyphens = id_value.replace('-', '')\n\n    Org_itr_block_url\
+          \ = \"https://api.notion.com/v1/blocks/\" + id_without_hyphens\n\n    #\
+          \ Translate text block\n    data = json.loads(Trn_itr_block)\n    id_value\
+          \ = data['results'][0]['id']\n    id_without_hyphens = id_value.replace('-',\
+          \ '')\n\n    Trn_itr_block_url = \"https://api.notion.com/v1/blocks/\" +\
+          \ id_without_hyphens\n\n\n    # Heading block\n    data = json.loads(Heading_block)\n\
+          \    id_value = data['results'][0]['id']\n    id_without_hyphens = id_value.replace('-',\
+          \ '')\n\n    Heading_block_url = \"https://api.notion.com/v1/blocks/\" +\
+          \ id_without_hyphens\n\n\n    if len(Target) > Chunk_size:\n        split_text\
+          \ = re.split(r'(?<=。)|(?<=\\.)\\s|(?<=\\n)', Target)\n        \n       \
+          \ result = []\n        current_chunk = \"\"\n        for sentence in split_text:\n\
+          \            if len(current_chunk) + len(sentence) > Chunk_size:\n     \
+          \           result.append(current_chunk)\n                current_chunk\
+          \ = sentence\n            else:\n                current_chunk += sentence\n\
+          \        if current_chunk:\n            result.append(current_chunk)\n\n\
+          \    else: \n        result = [Target]\n\n    return {\n        'chunks':\
+          \ result, \n        'CorrTbl': CorrTbl,\n        'Trn_itr_block_url': Trn_itr_block_url,\n\
+          \        'Org_itr_block_url': Org_itr_block_url,\n        'Heading_block_url':\
+          \ Heading_block_url\n        }\n "
+        code_language: python3
+        dependencies: []
+        desc: 'token_limit = 1000
+
+          overlap = 100'
+        outputs:
+          CorrTbl:
+            children: null
+            type: string
+          Heading_block_url:
+            children: null
+            type: string
+          Org_itr_block_url:
+            children: null
+            type: string
+          Trn_itr_block_url:
+            children: null
+            type: string
+          chunks:
+            children: null
+            type: array[string]
+        selected: false
+        title: Document Splitter
+        type: code
+        variables:
+        - value_selector:
+          - '1729958760241'
+          - output
+          variable: Target1
+        - value_selector:
+          - '1729949581607'
+          - text
+          variable: CorrTbl1
+        - value_selector:
+          - '1729949631527'
+          - body
+          variable: Org_itr_block
+        - value_selector:
+          - '17299496766680'
+          - body
+          variable: Trn_itr_block
+        - value_selector:
+          - '17299612498640'
+          - body
+          variable: Heading_block
+      height: 98
+      id: '1717916867969'
+      position:
+        x: 2040.042680957499
+        y: 1156.6428571428573
+      positionAbsolute:
+        x: 2040.042680957499
+        y: 1156.6428571428573
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        height: 599
+        iterator_selector:
+        - '1717916867969'
+        - chunks
+        output_selector:
+        - '1729925022624'
+        - Translate
+        output_type: array[string]
+        selected: false
+        start_node_id: 1729916311472start
+        title: イテレーション 2
+        type: iteration
+        width: 973
+      height: 599
+      id: '1729916311472'
+      position:
+        x: 2363.4285714285716
+        y: 502.3571428571429
+      positionAbsolute:
+        x: 2363.4285714285716
+        y: 502.3571428571429
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 973
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1729916311472start
+      parentId: '1729916311472'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 2387.4285714285716
+        y: 570.3571428571429
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        iteration_id: '1729916311472'
+        model:
+          completion_params:
+            temperature: 0.4
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 7dd478f5-988b-4321-93d2-88d2d4dbbfb8
+          role: system
+          text: "<Task>\nYou are a professional translator proficient in Japanese\
+            \ especially skilled in translating professional academic papers into\
+            \ easy-to-understand popular science articles.\n\nTranslate the text given\
+            \ by the USER into Japanese according to the translation guide.  Taking\
+            \ into account the overall context and ensuring that the original intent\
+            \ of the content is retained, make it easier to understand and more in\
+            \ line with Japanese expressive habits.  All the while maintaining the\
+            \ original format unchanged.\n\n\n<Translation Guidance>\n - No omitted\
+            \ translations: Ensure that all keywords, sentences, and paragraphs from\
+            \ the original text are reflected in the translation.\n - No mistranslations:\
+            \ Avoid errors due to misreading or misunderstanding the original text.\n\
+            \ - No intentional additions or omissions: Respect the author's original\
+            \ content without adding or omitting information. Translator's notes can\
+            \ be added as necessary.\n - Fluent translation: Ensure the translation\
+            \ is smooth and conforms to Japanese expression habits.\n - Names translation:\
+            \ Generally, names in technical books should not be translated, but well-known\
+            \ names should be translated into Japanese (e.g., スティーブ・ジョブズ for Steve\
+            \ Jobs).\n - Book titles translation: Use the Japanese title if available;\
+            \ if not, use the English title.\n - Charts and tables translation: Translate\
+            \ all titles, headings, and annotations in tables. Explanatory images\
+            \ should be provided with translations in a bilingual format.\n - English\
+            \ terms presentation: The first appearance of English terms should include\
+            \ the acronym followed by the full English and Japanese names in parentheses.\
+            \ For example: HTML (Hypertext Markup Language, ハイパーテキストマークアップ言語). Subsequent\
+            \ mentions can use the acronym alone.\n - Code listings and snippets:\
+            \ Do not require the input of program code from the original text, but\
+            \ annotate it using a format like \"Original Book Page 99 Code 1.\" Check\
+            \ code accuracy and note any errors found. Translate comments within the\
+            \ code; if no code is present, provide comments in both English and Japanese.\n\
+            \ - Punctuation: Follow Japanese punctuation norms and usage habits in\
+            \ the translation, rather than copying the original text's punctuation.\n\
+            \n\n<constraints>\n - Since the text you will translate is a continuation\
+            \ of the [previous translation], it should be translated considering its\
+            \ context.\n - If the original text of the previous sentence you translated\
+            \ does not end with a period and connects contextually to the start of\
+            \ the current target text, you should re-translate it by combining it\
+            \ with the previous text.\n - The response should only be the result of\
+            \ the translation target.\n - Leave one line blank before the chapter.\
+            \  Example:\n1. Title\n(paragraph)\n\n1.1 subtitle1\n(paragraph)\n\n1.1.1\
+            \ subtitle2\n * bullet1\n   * bullet2\n\n1.1.2 subtitle2\n (a) list1\n\
+            \ (b) list2\n\n\n<correspondence table> \n{{#1717916867969.CorrTbl#}}\n\
+            \n[previous translation (last 1000 characters)]\nOriginal text:\n{{#1729923583504.OriginalText#}}\n\
+            \nTranslated text:\n{{#1729923583504.TranslatedText#}}"
+        - id: 4aa839e5-24a6-4e11-a70a-c59fa4bf9963
+          role: user
+          text: 'Target text:
+
+            {{#1729916311472.item#}}'
+        selected: false
+        title: LLM 3
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1729916335283'
+      parentId: '1729916311472'
+      position:
+        x: 411.82546327019827
+        y: 69.59479341998804
+      positionAbsolute:
+        x: 2775.25403469877
+        y: 571.9519362771309
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729916311472'
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 3
+        type: http-request
+        url: '{{#1717916867969.Org_itr_block_url#}}'
+        variables: []
+      height: 96
+      id: '1729923521277'
+      parentId: '1729916311472'
+      position:
+        x: 133.53904935008813
+        y: 70.86829981431094
+      positionAbsolute:
+        x: 2496.9676207786597
+        y: 573.2254426714538
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "\ndef main(Original: str, Translated: str) -> dict:\n    data = json.loads(Original)\n\
+          \    OriginalText = data['paragraph']['rich_text'][0]['text']['content']\n\
+          \n    data = json.loads(Translated)\n    TranslatedText = data['paragraph']['rich_text'][0]['text']['content']\n\
+          \    return {'OriginalText': OriginalText, \"TranslatedText\": TranslatedText,\
+          \ \"TMP\": None}\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1729916311472'
+        outputs:
+          OriginalText:
+            children: null
+            type: string
+          TMP:
+            children: null
+            type: string
+          TranslatedText:
+            children: null
+            type: string
+        selected: false
+        title: Get Previous Translation
+        type: code
+        variables:
+        - value_selector:
+          - '1729923521277'
+          - body
+          variable: Original
+        - value_selector:
+          - '1729924351212'
+          - body
+          variable: Translated
+      height: 54
+      id: '1729923583504'
+      parentId: '1729916311472'
+      position:
+        x: 130.28088329185448
+        y: 299.2085115429659
+      positionAbsolute:
+        x: 2493.709454720426
+        y: 801.5656544001088
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729916311472'
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 6
+        type: http-request
+        url: '{{#1717916867969.Trn_itr_block_url#}}'
+        variables: []
+      height: 96
+      id: '1729924351212'
+      parentId: '1729916311472'
+      position:
+        x: 143.74244084076054
+        y: 183.3159305646942
+      positionAbsolute:
+        x: 2507.171012269332
+        y: 685.6730734218371
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-5837
+            key: ''
+            type: text
+            value: '{{#1729925022624.Translate_itr#}}'
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729916311472'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 8
+        type: http-request
+        url: '{{#1717916867969.Trn_itr_block_url#}}'
+        variables: []
+      height: 96
+      id: '1729924625068'
+      parentId: '1729916311472'
+      position:
+        x: 694.9723092667209
+        y: 347.6588377169835
+      positionAbsolute:
+        x: 3058.4008806952925
+        y: 850.0159805741264
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-5838
+            key: ''
+            type: text
+            value: '{{#1729925022624.Originaltxt#}}'
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729916311472'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 7
+        type: http-request
+        url: '{{#1717916867969.Org_itr_block_url#}}'
+        variables: []
+      height: 96
+      id: '1729924642144'
+      parentId: '1729916311472'
+      position:
+        x: 699.2989400756596
+        y: 464.56890302572697
+      positionAbsolute:
+        x: 3062.727511504231
+        y: 966.9260458828699
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(Class: str, Translation1: str, Translation2: str, OriginalText:\
+          \ str) -> dict:\n\n    if Class == \"Translation 1\":\n        arg_itr =\
+          \ Translation1[-1000:]\n        arg = Translation1\n    elif Class == \"\
+          Translation 2\":\n        arg_itr = Translation2[-1000:]\n        arg =\
+          \ Translation2\n\n    json_data_trn = {\"paragraph\":{\"rich_text\":[{\"\
+          text\":{\"content\":arg_itr}}]}}\n\n\n    orgtxt = OriginalText[-1000:]\n\
+          \    json_data_org = {\"paragraph\":{\"rich_text\":[{\"text\":{\"content\"\
+          :orgtxt}}]}}\n\n    return {\n        'Translate_itr': json.dumps(json_data_trn,\
+          \ ensure_ascii=False), \n        'Translate' : arg,\n        'Originaltxt':\
+          \ json.dumps(json_data_org, ensure_ascii=False)}"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1729916311472'
+        outputs:
+          Originaltxt:
+            children: null
+            type: string
+          Translate:
+            children: null
+            type: string
+          Translate_itr:
+            children: null
+            type: string
+        selected: false
+        title: Translated
+        type: code
+        variables:
+        - value_selector:
+          - '1729943839757'
+          - class_name
+          variable: Class
+        - value_selector:
+          - '1729916335283'
+          - text
+          variable: Translation1
+        - value_selector:
+          - '1729939516626'
+          - text
+          variable: Translation2
+        - value_selector:
+          - '1729916311472'
+          - item
+          variable: OriginalText
+      height: 54
+      id: '1729925022624'
+      parentId: '1729916311472'
+      position:
+        x: 700.3837385396209
+        y: 280.55472031288673
+      positionAbsolute:
+        x: 3063.8123099681925
+        y: 782.9118631700296
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(texts: list[str], OutputPage_url: str) -> dict:\n    text\
+          \ = ''.join(texts)\n    import re\n    if len(text) > 2000:\n        #split_text\
+          \ = re.split(r'(?<=。)', text)  # Split at '。' while keeping the delimiter\n\
+          \n        split_text = re.split(r'(?<=。|\\n)', text)  # Split at '。' or\
+          \ newline while keeping the delimiter        \n        \n        result\
+          \ = []\n        current_chunk = \"\"\n        for sentence in split_text:\n\
+          \            if len(current_chunk) + len(sentence) > 2000:\n           \
+          \     result.append(current_chunk)\n                current_chunk = sentence\n\
+          \            else:\n                current_chunk += sentence\n        if\
+          \ current_chunk:\n            result.append(current_chunk)\n\n        result\
+          \ = [chunk.rstrip('\\n') for chunk in result]\n    \n    else: \n      \
+          \  result = [text.rstrip('\\n')]\n\n    if len(result) > 20:\n        chunk_size\
+          \ = len(result) // 3\n        result_split_1 = result[:chunk_size]\n   \
+          \     result_split_2 = result[chunk_size:2*chunk_size]\n        result_split_3\
+          \ = result[2*chunk_size:]\n\n    else:\n        result_split_1 = result\n\
+          \        result_split_2 = None\n        result_split_3 = None\n\n    OutputPage_url\
+          \ = OutputPage_url\n\n    return {\n        'result_split_1': result_split_1,\n\
+          \        'result_split_2': result_split_2,\n        'result_split_3': result_split_3,\n\
+          \        'OutputPage_url': OutputPage_url\n        }\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1729916311472'
+        outputs:
+          OutputPage_url:
+            children: null
+            type: string
+          result_split_1:
+            children: null
+            type: array[string]
+          result_split_2:
+            children: null
+            type: array[string]
+          result_split_3:
+            children: null
+            type: array[string]
+        selected: false
+        title: Output Splitter (1)
+        type: code
+        variables:
+        - value_selector:
+          - '1729916311472'
+          - output
+          variable: texts
+        - value_selector:
+          - '1711067409646'
+          - OutputParentURL
+          variable: OutputPage_url
+      height: 54
+      id: '17299294575790'
+      position:
+        x: 3398.7142857142862
+        y: 733.7857142857142
+      positionAbsolute:
+        x: 3398.7142857142862
+        y: 733.7857142857142
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        desc: ''
+        height: 408
+        iterator_selector:
+        - '17299294575790'
+        - result_split_1
+        output_selector:
+        - '1729930610626'
+        - headers
+        output_type: array[object]
+        selected: false
+        start_node_id: 1729929504443start
+        title: イテレーション 2
+        type: iteration
+        width: 432
+      height: 408
+      id: '1729929504443'
+      position:
+        x: 3689.857142857143
+        y: 502.3571428571429
+      positionAbsolute:
+        x: 3689.857142857143
+        y: 502.3571428571429
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 432
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1729929504443start
+      parentId: '1729929504443'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 3713.857142857143
+        y: 570.3571428571429
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-291
+            key: ''
+            type: text
+            value: "{\n  \"children\": [\n    {\n      \"object\": \"block\",\n  \
+              \    \"type\": \"paragraph\",\n      \"paragraph\": {\n        \"rich_text\"\
+              : [\n          {\n            \"text\": {\n              \"content\"\
+              : \"Preserved\"\n            }\n          }\n        ]\n      }\n  \
+              \  }\n  ]\n}\n"
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729929504443'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 9
+        type: http-request
+        url: '{{#17299294575790.OutputPage_url#}}'
+        variables: []
+      height: 96
+      id: '1729929543735'
+      parentId: '1729929504443'
+      position:
+        x: 160.85714285714266
+        y: 65.14285714285717
+      positionAbsolute:
+        x: 3850.714285714286
+        y: 567.5
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(http_body: str, item: str) -> dict:\n    data = json.loads(http_body)\n\
+          \    id_value = data['results'][0]['id']\n    id_without_hyphens = id_value.replace('-',\
+          \ '')\n\n    data = {\"paragraph\":{\"rich_text\":[{\"text\":{\"content\"\
+          :item}}]}}\n\n    target = \"https://api.notion.com/v1/blocks/\" + id_without_hyphens\n\
+          \    return {\n        'target_url': target,\n        'result': json.dumps(data,\
+          \ ensure_ascii=False)\n    }"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1729929504443'
+        outputs:
+          result:
+            children: null
+            type: string
+          target_url:
+            children: null
+            type: string
+        selected: false
+        title: コード 9
+        type: code
+        variables:
+        - value_selector:
+          - '1729929543735'
+          - body
+          variable: http_body
+        - value_selector:
+          - '1729929504443'
+          - item
+          variable: item
+      height: 54
+      id: '1729930031571'
+      parentId: '1729929504443'
+      position:
+        x: 160.12826621156228
+        y: 183.95108700255048
+      positionAbsolute:
+        x: 3849.9854090687054
+        y: 686.3082298596934
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-292
+            key: ''
+            type: text
+            value: '{{#1729930031571.result#}}'
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729929504443'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 10
+        type: http-request
+        url: '{{#1729930031571.target_url#}}'
+        variables: []
+      height: 96
+      id: '1729930610626'
+      parentId: '1729929504443'
+      position:
+        x: 158.24630425235136
+        y: 270.02540564309254
+      positionAbsolute:
+        x: 3848.1034471094945
+        y: 772.3825485002354
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        iteration_id: '1729916311472'
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        prompt_template:
+        - id: 13977d5c-010b-4bea-9671-1bb345e07fc8
+          role: system
+          text: "＜タスク＞\nあなたは日本語に堪能で、特に専門的な学術論文をわかりやすい一般科学論文に翻訳することに長けたプロの翻訳者です。\n\n\
+            翻訳ガイドに従って、ユーザーから渡された文章を日本語に翻訳してください。 全体の文脈を考慮し、内容本来の意図を損なわないよう、日本人の表現習慣に沿った分かりやすい文章に仕上げます。\
+            \ 原文の形式はそのまま維持します。\n\n\n＜翻訳ガイド＞\n - 訳漏れがないこと： 原文のキーワード、センテンス、パラグラフがすべて翻訳に反映されるようにします。\n\
+            \ - 誤訳をしない： 原文の読み間違いや誤解による誤訳を避ける。\n - 意図的な追加や省略をしない： 情報の追加や省略をせず、著者の原文の内容を尊重する。必要に応じて訳注を加えることができる。\n\
+            \ - 流暢な翻訳： 日本語の表現習慣に沿ったスムーズな翻訳を心がけます。\n - 人名訳： 一般に専門書の人名は翻訳しないが、著名な人名は日本語に翻訳する（例：スティーブ・ジョブズならスティーブ・ジョブズ）。\n\
+            \ - 書名の翻訳： 日本語タイトルがあればそれを使用し、なければ英語タイトルを使用する。\n - 図表の翻訳： 表のタイトル、見出し、注釈はすべて翻訳する。説明画像は対訳付きで提供する。\n\
+            \ - 英語用語の表示： 英文用語の初出には、頭字語の後に英語名と日本語名を括弧書きで記載する。例えば HTML（Hypertext Markup\
+            \ Language、ハイパーテキストアップマークアップ言語）。それ以降は頭文字のみで表記する。\n - コードリストとスニペット： 原文からプログラムコードを入力する必要はないが、「Original\
+            \ Book Page 99 Code 1 」のような形式で注釈をつける。コードの正確さをチェックし、見つかったエラーを記録する。コード内のコメントを翻訳する。コードがない場合は、英語と日本語の両方でコメントを記載する。\n\
+            \ - 句読点： 原文の句読点をコピーするのではなく、日本語の句読点の使い方や習慣に従って翻訳する。\n\n＜制約事項＞\n - 対象訳文は【前回の訳文】の続きなので、文脈を考慮して訳すこと。\n\
+            \ - 翻訳した前の文の原文がピリオドで終わっておらず、現在の文の冒頭と文脈的につながっている場合は、前の文と組み合わせて再翻訳すること。\n\
+            \ - 回答はあくまで翻訳対象の結果であること。\n - 章の前は1行空けてください。 例：\n1. タイトル\n（1章の文章）\n\n1.1\
+            \ 副題1\n（1.1章の文章）\n\n1.1.1 副題2\n * 箇条書き1\n   * 箇条書き2\n\n1.1.2 サブタイトル2\n\
+            \ (a) リスト1\n (b) リスト2\n\n＜対訳表＞\n{{#1717916867969.CorrTbl#}}\n\n【前回の訳文（最後の1000文字）】\n\
+            原文：\n{{#1729923583504.OriginalText#}}\n\n翻訳文：\n{{#1729923583504.TranslatedText#}}"
+        - id: 83ee2fa4-5c73-431e-a3de-7a92c0375911
+          role: user
+          text: '{{#1729916311472.item#}}'
+        selected: false
+        title: LLM 3 - re
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+            variable_selector: []
+          enabled: false
+      height: 98
+      id: '1729939516626'
+      parentId: '1729916311472'
+      position:
+        x: 413.90015230794415
+        y: 191.7341426334823
+      positionAbsolute:
+        x: 2777.3287237365157
+        y: 694.0912854906252
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        classes:
+        - id: '1'
+          name: Translation 1
+        - id: '2'
+          name: Translation 2
+        desc: ''
+        instruction: 'You will be provided with the original text and two translations.
+          Your task is to evaluate the translations and output the one that most accurately
+          captures the content and meaning of the original text. You should respond
+          only with the text of the better translation.
+
+
+          ### Original Text
+
+          {{#1729916311472.item#}}
+
+
+          ### Translation 1
+
+          {{#1729916335283.text#}}
+
+
+          ### Translation 2
+
+          {{#1729939516626.text#}}'
+        instructions: ''
+        isInIteration: true
+        iteration_id: '1729916311472'
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4o-mini
+          provider: openai
+        query_variable_selector:
+        - '1729923583504'
+        - TMP
+        selected: false
+        title: 質問分類器
+        topics: []
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 176
+      id: '1729943839757'
+      parentId: '1729916311472'
+      position:
+        x: 691.833919253786
+        y: 69.59479341998804
+      positionAbsolute:
+        x: 3055.2624906823576
+        y: 571.9519362771309
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        desc: ''
+        is_array_file: false
+        selected: false
+        title: ドキュメントエクストラクター
+        type: document-extractor
+        variable_selector:
+        - '1711067409646'
+        - File
+      height: 94
+      id: '1729949415248'
+      position:
+        x: 1699.714285714286
+        y: 669.8376853101414
+      positionAbsolute:
+        x: 1699.714285714286
+        y: 669.8376853101414
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not exists
+            id: cb88734f-9270-45c3-aae3-9a87a898308b
+            value: ''
+            varType: file
+            variable_selector:
+            - '1711067409646'
+            - File
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: IF/ELSE 2
+        type: if-else
+      height: 126
+      id: '1729949478298'
+      position:
+        x: 1699.714285714286
+        y: 502.3571428571429
+      positionAbsolute:
+        x: 1699.714285714286
+        y: 502.3571428571429
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-1.5-flash-latest
+          provider: google
+        prompt_template:
+        - id: 653ae7ae-442a-4d0a-b466-def443e07e09
+          role: system
+          text: "<Task>\nYou are a professional translator proficient in Japanese\
+            \ especially skilled in translating professional academic papers into\
+            \ easy-to-understand popular science articles.\n\nIdentify the domain\
+            \ in which the document given by the user is used and create a translation\
+            \ correspondence table of technical terms in that context.  If the Japanese\
+            \ corresponding to a technical term in the source language is not popular,\
+            \ it should not list in the correspondence table.  The same technical\
+            \ term should not be listed more than once. \n\nDisplay the corresponding\
+            \ technical terms in the source language and Japanese according to the\
+            \ following example.  Responses should be in the form of a table only.\
+            \  Tables are displayed in alphabetical order.\n\n<Example>\n| 英文 | 日本語|\n\
+            | --- | --- |\n| Prompt Engineering |プロンプト・エンジニアリング |\n| Text Generation\
+            \  | テキスト生成|\n| chat window  | チャットウィンドウ |\n| context | コンテキスト |\n\n"
+        - id: 988df967-edb3-4537-bd2b-64a5613f1404
+          role: user
+          text: "<Input Text> \n{{#1729958760241.output#}}"
+        selected: false
+        title: LLM 3
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1729949581607'
+      position:
+        x: 2040.042680957499
+        y: 677.6631938598274
+      positionAbsolute:
+        x: 2040.042680957499
+        y: 677.6631938598274
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-136
+            key: ''
+            type: text
+            value: "{\n  \"children\": [\n    {\n      \"object\": \"block\",\n  \
+              \    \"type\": \"paragraph\",\n      \"paragraph\": {\n        \"rich_text\"\
+              : [\n          {\n            \"text\": {\n              \"content\"\
+              : \"Preserved\"\n            }\n          }\n        ]\n      }\n  \
+              \  }\n  ]\n}\n"
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 7
+        type: http-request
+        url: '{{#1729959658116.MasterPage_url#}}'
+        variables: []
+      height: 96
+      id: '1729949631527'
+      position:
+        x: 2040.042680957499
+        y: 810.9285714285716
+      positionAbsolute:
+        x: 2040.042680957499
+        y: 810.9285714285716
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-136
+            key: ''
+            type: text
+            value: "{\n  \"children\": [\n    {\n      \"object\": \"block\",\n  \
+              \    \"type\": \"paragraph\",\n      \"paragraph\": {\n        \"rich_text\"\
+              : [\n          {\n            \"text\": {\n              \"content\"\
+              : \"Preserved\"\n            }\n          }\n        ]\n      }\n  \
+              \  }\n  ]\n}\n"
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 7 (1)
+        type: http-request
+        url: '{{#1729959658116.MasterPage_url#}}'
+        variables: []
+      height: 96
+      id: '17299496766680'
+      position:
+        x: 2040.042680957499
+        y: 968.0714285714287
+      positionAbsolute:
+        x: 2040.042680957499
+        y: 968.0714285714287
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        height: 396
+        iterator_selector:
+        - '17299294575790'
+        - result_split_2
+        output_selector:
+        - '1729954416366017299544163670'
+        - headers
+        output_type: array[object]
+        selected: false
+        start_node_id: 1729954416366start
+        title: イテレーション 2 (1)
+        type: iteration
+        width: 383
+      height: 396
+      id: '17299544163660'
+      position:
+        x: 4170.142857142857
+        y: 652.357142857143
+      positionAbsolute:
+        x: 4170.142857142857
+        y: 652.357142857143
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 383
+      zIndex: 1
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-291
+            key: ''
+            type: text
+            value: "{\n  \"children\": [\n    {\n      \"object\": \"block\",\n  \
+              \    \"type\": \"paragraph\",\n      \"paragraph\": {\n        \"rich_text\"\
+              : [\n          {\n            \"text\": {\n              \"content\"\
+              : \"Preserved\"\n            }\n          }\n        ]\n      }\n  \
+              \  }\n  ]\n}\n"
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '17299544163660'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 13
+        type: http-request
+        url: '{{#17299294575790.OutputPage_url#}}'
+        variables: []
+      height: 96
+      id: '1729954416366017299544163670'
+      parentId: '17299544163660'
+      position:
+        x: 115.77803393868362
+        y: 65
+      positionAbsolute:
+        x: 4285.9208910815405
+        y: 717.357142857143
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(http_body: str, item: str) -> dict:\n    data = json.loads(http_body)\n\
+          \    id_value = data['results'][0]['id']\n    id_without_hyphens = id_value.replace('-',\
+          \ '')\n\n    data = {\"paragraph\":{\"rich_text\":[{\"text\":{\"content\"\
+          :item}}]}}\n\n    target = \"https://api.notion.com/v1/blocks/\" + id_without_hyphens\n\
+          \    return {\n        'target_url': target,\n        'result': json.dumps(data,\
+          \ ensure_ascii=False)\n    }"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '17299544163660'
+        outputs:
+          result:
+            children: null
+            type: string
+          target_url:
+            children: null
+            type: string
+        selected: false
+        title: コード 6
+        type: code
+        variables:
+        - value_selector:
+          - '1729954416366017299544163670'
+          - body
+          variable: http_body
+        - value_selector:
+          - '17299544163660'
+          - item
+          variable: item
+      height: 54
+      id: '1729954416366017299544163671'
+      parentId: '17299544163660'
+      position:
+        x: 111.60306222811323
+        y: 178.20759522756532
+      positionAbsolute:
+        x: 4281.74591937097
+        y: 830.5647380847083
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-292
+            key: ''
+            type: text
+            value: '{{#1729954416366017299544163671.result#}}'
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '17299544163660'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 9
+        type: http-request
+        url: '{{#1729954416366017299544163671.target_url#}}'
+        variables: []
+      height: 96
+      id: '1729954416366017299544163672'
+      parentId: '17299544163660'
+      position:
+        x: 117.76198875388127
+        y: 259.6871204481191
+      positionAbsolute:
+        x: 4287.904845896738
+        y: 912.0442633052621
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1729954416366start
+      parentId: '17299544163660'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 4194.142857142857
+        y: 720.357142857143
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        desc: ''
+        height: 382
+        iterator_selector:
+        - '17299294575790'
+        - result_split_3
+        output_selector:
+        - '1729954419666017299544196660'
+        - headers
+        output_type: array[object]
+        selected: false
+        start_node_id: 1729954419666start
+        title: イテレーション 2 (2)
+        type: iteration
+        width: 386
+      height: 382
+      id: '17299544196660'
+      position:
+        x: 4580.974574647406
+        y: 803.466709457462
+      positionAbsolute:
+        x: 4580.974574647406
+        y: 803.466709457462
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 386
+      zIndex: 1
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-291
+            key: ''
+            type: text
+            value: "{\n  \"children\": [\n    {\n      \"object\": \"block\",\n  \
+              \    \"type\": \"paragraph\",\n      \"paragraph\": {\n        \"rich_text\"\
+              : [\n          {\n            \"text\": {\n              \"content\"\
+              : \"Preserved\"\n            }\n          }\n        ]\n      }\n  \
+              \  }\n  ]\n}\n"
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '17299544196660'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 14
+        type: http-request
+        url: '{{#17299294575790.OutputPage_url#}}'
+        variables: []
+      height: 96
+      id: '1729954419666017299544196660'
+      parentId: '17299544196660'
+      position:
+        x: 84.76317835376358
+        y: 65.14285714285722
+      positionAbsolute:
+        x: 4665.73775300117
+        y: 868.6095666003192
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: "def main(http_body: str, item: str) -> dict:\n    data = json.loads(http_body)\n\
+          \    id_value = data['results'][0]['id']\n    id_without_hyphens = id_value.replace('-',\
+          \ '')\n\n    data = {\"paragraph\":{\"rich_text\":[{\"text\":{\"content\"\
+          :item}}]}}\n\n    target = \"https://api.notion.com/v1/blocks/\" + id_without_hyphens\n\
+          \    return {\n        'target_url': target,\n        'result': json.dumps(data,\
+          \ ensure_ascii=False)\n    }"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '17299544196660'
+        outputs:
+          result:
+            children: null
+            type: string
+          target_url:
+            children: null
+            type: string
+        selected: false
+        title: コード 7
+        type: code
+        variables:
+        - value_selector:
+          - '1729954419666017299544196660'
+          - body
+          variable: http_body
+        - value_selector:
+          - '17299544196660'
+          - item
+          variable: item
+      height: 54
+      id: '1729954419666017299544196661'
+      parentId: '17299544196660'
+      position:
+        x: 102.41347538813716
+        y: 178.20759522756532
+      positionAbsolute:
+        x: 4683.3880500355435
+        y: 981.6743046850273
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-292
+            key: ''
+            type: text
+            value: '{{#1729954419666017299544196661.result#}}'
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '17299544196660'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 11
+        type: http-request
+        url: '{{#1729954419666017299544196661.target_url#}}'
+        variables: []
+      height: 96
+      id: '1729954419666017299544196662'
+      parentId: '17299544196660'
+      position:
+        x: 107.42370355890671
+        y: 253.94362867313407
+      positionAbsolute:
+        x: 4688.398278206313
+        y: 1057.410338130596
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1729954419666start
+      parentId: '17299544196660'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 4604.974574647406
+        y: 871.466709457462
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: empty
+            id: b224a4d5-e12c-4bd1-b8c1-94ea5005dd5c
+            value: ''
+            varType: array[string]
+            variable_selector:
+            - '17299294575790'
+            - result_split_2
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: IF/ELSE 2
+        type: if-else
+      height: 126
+      id: '1729954509625'
+      position:
+        x: 4179.000000000001
+        y: 502.3571428571429
+      positionAbsolute:
+        x: 4179.000000000001
+        y: 502.3571428571429
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: empty
+            id: 6cf3e2ee-441c-430a-ae03-adf29c7d064b
+            value: ''
+            varType: array[string]
+            variable_selector:
+            - '17299294575790'
+            - result_split_3
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: IF/ELSE 3
+        type: if-else
+      height: 126
+      id: '1729954522465'
+      position:
+        x: 4576
+        y: 652.357142857143
+      positionAbsolute:
+        x: 4576
+        y: 652.357142857143
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        method: delete
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 7 (2)
+        type: http-request
+        url: '{{#1717916867969.Org_itr_block_url#}}'
+        variables: []
+      height: 96
+      id: '17299575956060'
+      position:
+        x: 3402.1428571428573
+        y: 502.3571428571429
+      positionAbsolute:
+        x: 3402.1428571428573
+        y: 502.3571428571429
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        method: delete
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 7 (3)
+        type: http-request
+        url: '{{#1717916867969.Trn_itr_block_url#}}'
+        variables: []
+      height: 96
+      id: '17299576020260'
+      position:
+        x: 3402.1428571428573
+        y: 610.9285714285714
+      positionAbsolute:
+        x: 3402.1428571428573
+        y: 610.9285714285714
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        output_type: string
+        selected: false
+        title: 変数集約器
+        type: variable-aggregator
+        variables:
+        - - '1729949415248'
+          - text
+        - - '1711067409646'
+          - InputText
+      height: 138
+      id: '1729958760241'
+      position:
+        x: 2040.042680957499
+        y: 502.3571428571429
+      positionAbsolute:
+        x: 2040.042680957499
+        y: 502.3571428571429
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(MasterPageID: str) -> dict:\n    return {\n        \"MasterPage_url\"\
+          : \"https://api.notion.com/v1/blocks/\" + MasterPageID + \"/Children\",\n\
+          \    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          MasterPage_url:
+            children: null
+            type: string
+        selected: false
+        title: コード 8
+        type: code
+        variables:
+        - value_selector:
+          - '1711067409646'
+          - MasterPageID
+          variable: MasterPageID
+      height: 54
+      id: '1729959658116'
+      position:
+        x: 1395.714285714286
+        y: 706.5879268375866
+      positionAbsolute:
+        x: 1395.714285714286
+        y: 706.5879268375866
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-291
+            key: ''
+            type: text
+            value: "{\n  \"children\": [{\"object\": \"block\", \"type\": \"heading_1\"\
+              , \"heading_1\": {\"rich_text\": [{\"text\": {\"content\": \"*** 全文翻訳作成中\
+              \ ***\"}}]}}\n]\n}\n"
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729929504443'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 9 (1)
+        type: http-request
+        url: '{{#1711067409646.OutputParentURL#}}'
+        variables: []
+      height: 96
+      id: '17299612498640'
+      position:
+        x: 1405.0532840652938
+        y: 820.9915815613442
+      positionAbsolute:
+        x: 1405.0532840652938
+        y: 820.9915815613442
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config:
+            api_key: '{{#env.Notion_API_Key#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-291
+            key: ''
+            type: text
+            value: '{"object": "block", "type": "heading_1", "heading_1": {"rich_text":
+              [{"text": {"content": "全文翻訳"}}]}}'
+          type: json
+        desc: ''
+        headers: Notion-Version:2022-06-28
+        isInIteration: true
+        iteration_id: '1729929504443'
+        method: patch
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTPリクエスト 9 (2)
+        type: http-request
+        url: '{{#1717916867969.Heading_block_url#}}'
+        variables: []
+      height: 96
+      id: '17299618939050'
+      position:
+        x: 5052.421496567764
+        y: 527.6337154188637
+      positionAbsolute:
+        x: 5052.421496567764
+        y: 527.6337154188637
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    viewport:
+      x: -2216.787677262289
+      y: -56.1501754441515
+      zoom: 0.8040888484979247

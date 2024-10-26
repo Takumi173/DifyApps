@@ -269,18 +269,6 @@ workflow:
       zIndex: 0
     - data:
         isInIteration: false
-        sourceType: variable-aggregator
-        targetType: llm
-      id: 1729748318556-source-1729681971224-target
-      selected: false
-      source: '1729748318556'
-      sourceHandle: source
-      target: '1729681971224'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
         sourceType: if-else
         targetType: code
       id: 1729748246206-false-1729748292854-target
@@ -305,42 +293,6 @@ workflow:
       zIndex: 0
     - data:
         isInIteration: false
-        sourceType: variable-aggregator
-        targetType: llm
-      id: 1729748318556-source-17297579713690-target
-      selected: false
-      source: '1729748318556'
-      sourceHandle: source
-      target: '17297579713690'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: variable-aggregator
-        targetType: llm
-      id: 1729748318556-source-17297580308120-target
-      selected: false
-      source: '1729748318556'
-      sourceHandle: source
-      target: '17297580308120'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: variable-aggregator
-        targetType: llm
-      id: 1729748318556-source-17297700943980-target
-      selected: false
-      source: '1729748318556'
-      sourceHandle: source
-      target: '17297700943980'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
         sourceType: llm
         targetType: code
       id: 17297580308120-source-1729762470082-target
@@ -358,66 +310,6 @@ workflow:
       id: 17297579713690-source-1729762470082-target
       selected: false
       source: '17297579713690'
-      sourceHandle: source
-      target: '1729762470082'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: http-request
-        targetType: end
-      id: 17297626682050-source-1729470826350-target
-      selected: false
-      source: '17297626682050'
-      sourceHandle: source
-      target: '1729470826350'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: llm
-        targetType: code
-      id: 17297700943980-source-1729777611576-target
-      selected: false
-      source: '17297700943980'
-      sourceHandle: source
-      target: '1729777611576'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: code
-        targetType: code
-      id: 1729777611576-source-1729762470082-target
-      selected: false
-      source: '1729777611576'
-      sourceHandle: source
-      target: '1729762470082'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: llm
-        targetType: code
-      id: 1729681971224-source-1729785130564-target
-      selected: false
-      source: '1729681971224'
-      sourceHandle: source
-      target: '1729785130564'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        sourceType: code
-        targetType: code
-      id: 1729785130564-source-1729762470082-target
-      selected: false
-      source: '1729785130564'
       sourceHandle: source
       target: '1729762470082'
       targetHandle: target
@@ -488,6 +380,7 @@ workflow:
         sourceType: if-else
         targetType: code
       id: 1729745883840-false-17298456521160-target
+      selected: false
       source: '1729745883840'
       sourceHandle: 'false'
       target: '17298456521160'
@@ -499,9 +392,98 @@ workflow:
         sourceType: code
         targetType: end
       id: 17298456521160-source-1729845731599-target
+      selected: false
       source: '17298456521160'
       sourceHandle: source
       target: '1729845731599'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: code
+      id: 17297626682050-source-1729903735210-target
+      source: '17297626682050'
+      sourceHandle: source
+      target: '1729903735210'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: code
+      id: 1729748318556-source-1729785130564-target
+      source: '1729748318556'
+      sourceHandle: source
+      target: '1729785130564'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1729785130564-source-1729681971224-target
+      source: '1729785130564'
+      sourceHandle: source
+      target: '1729681971224'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 1729681971224-source-1729762470082-target
+      source: '1729681971224'
+      sourceHandle: source
+      target: '1729762470082'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1729785130564-source-17297579713690-target
+      source: '1729785130564'
+      sourceHandle: source
+      target: '17297579713690'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1729785130564-source-17297580308120-target
+      source: '1729785130564'
+      sourceHandle: source
+      target: '17297580308120'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: tool
+      id: 1729903735210-source-1729962385382-target
+      source: '1729903735210'
+      sourceHandle: source
+      target: '1729962385382'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: end
+      id: 1729962385382-source-1729470826350-target
+      source: '1729962385382'
+      sourceHandle: source
+      target: '1729470826350'
       targetHandle: target
       type: custom
       zIndex: 0
@@ -548,15 +530,15 @@ workflow:
         - value_selector:
           - '1729681971224'
           - text
-          variable: text
+          variable: result
         - value_selector:
           - '17297579713690'
           - text
-          variable: text
+          variable: result
         - value_selector:
           - '17297580308120'
           - text
-          variable: text
+          variable: result
         - value_selector:
           - '1729777611576'
           - result
@@ -564,23 +546,27 @@ workflow:
         - value_selector:
           - '1729470775843'
           - URL
-          variable: URL
+          variable: result
         - value_selector:
           - '1729470775843'
           - File
           - name
-          variable: name
+          variable: result
+        - value_selector:
+          - '1729903735210'
+          - url
+          variable: result
         selected: false
         title: 終了
         type: end
-      height: 220
+      height: 246
       id: '1729470826350'
       position:
-        x: 2929.6523637227015
-        y: 109.95694886607066
+        x: 3064.85093631679
+        y: -98.42857142857147
       positionAbsolute:
-        x: 2929.6523637227015
-        y: 109.95694886607066
+        x: 3064.85093631679
+        y: -98.42857142857147
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -600,24 +586,9 @@ workflow:
         prompt_template:
         - id: 304b8287-6c96-419d-8521-350ed214396c
           role: system
-          text: "```xml\n<instruction>\n  <task_description>\n    You, as a professional\
-            \ translator, should title the Japanese to best fit the text you are given.\n\
-            \    Do not use markdown.\n  </task_description>\n\n  <instructions>\n\
-            \    1. read the given text carefully.\n    2. come up with an appropriate\
-            \ Japanese title based on the content and subject matter of the text\n\
-            \    3. make sure the title is concise, clear, and expresses the main\
-            \ point of the text\n    4. do not use markdown in the title.\n    5.\
-            \ do not include XML tags in the output.\n    Note: The output should\
-            \ contain only appropriate Japanese titles based on the given text.\n\
-            \  </instructions>\n\n  <examples>\n    <example>\n      <input>\n   \
-            \     Given Text: \"The Art of Japanese Cuisine\"\n      </input>\n  \
-            \    <output>\n        日本料理の芸術\n      </output>\n    </example>\n\n  \
-            \  <example>\n      <input>\n        Given Text: \"Exploring the Beauty\
-            \ of Kyoto\"\n      </input>\n      <output>\n        京都の美を探る\n      </output>\n\
-            \    </example>\n\n    <example>\n      <input>\n        Given Text: \"\
-            Traditional Tea Ceremony in Japan\"\n      </input>\n      <output>\n\
-            \        日本の伝統的な茶道\n      </output>\n    </example>\n  </examples>\n</instruction>\n\
-            ```"
+          text: 'Title the Japanese to best fit the text.
+
+            Ensure that the title MUST not exceed 10 token.'
         - id: 384d1547-c00d-413d-952f-27411594b37f
           role: user
           text: テキスト：{{#1729728469370.Group1.output#}}
@@ -630,10 +601,10 @@ workflow:
       height: 98
       id: '1729681971224'
       position:
-        x: 1975.7568588152756
+        x: 2275.7568588152753
         y: -98.42857142857147
       positionAbsolute:
-        x: 1975.7568588152756
+        x: 2275.7568588152753
         y: -98.42857142857147
       selected: false
       sourcePosition: right
@@ -1202,11 +1173,11 @@ workflow:
       height: 98
       id: '17297579713690'
       position:
-        x: 1975.7568588152756
-        y: 48.24764123810198
+        x: 2275.7568588152753
+        y: 28.543325873466813
       positionAbsolute:
-        x: 1975.7568588152756
-        y: 48.24764123810198
+        x: 2275.7568588152753
+        y: 28.543325873466813
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -1247,43 +1218,38 @@ workflow:
       height: 98
       id: '17297580308120'
       position:
-        x: 1975.7568588152756
-        y: 173.20146094973313
+        x: 2275.7568588152753
+        y: 158.0442952846292
       positionAbsolute:
-        x: 1975.7568588152756
-        y: 173.20146094973313
+        x: 2275.7568588152753
+        y: 158.0442952846292
       selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
     - data:
-        code: "def main(arg1: str, arg2: str, arg3: str, arg4: list[str], arg5: str,\
-          \ arg6: str, Notion_database_ID: str, Notion_Master_DB_ID: str) -> dict:\n\
-          \    children = []\n    children.append({\"object\": 'block', \"type\":\
-          \ 'heading_1', \"heading_1\": {\"rich_text\": [{\"text\": {\"content\":\
-          \ \"要点\"}}]}})\n    children.append({\"object\": 'block', \"type\": 'paragraph',\
-          \ \"paragraph\": {\"rich_text\": [{\"text\": {\"content\": arg3}}]}})\n\
-          \    children.append({\"object\": 'block', \"type\": 'heading_1', \"heading_1\"\
-          : {\"rich_text\": [{\"text\": {\"content\": \"全文翻訳\"}}]}})\n    for string\
-          \ in arg4:\n        children.append({\"object\": 'block', \"type\": 'paragraph',\
-          \ \"paragraph\": {\"rich_text\": [{\"text\": {\"content\": string}}]}})\n\
-          \n    json_data = {\n        \"parent\": {\"database_id\": Notion_database_ID},\n\
-          \        \"properties\": {\n            \"title\": {\n                \"\
-          title\": [\n                    {\n                        \"text\": {\n\
-          \                            \"content\": arg1\n                       \
-          \ }\n                    }\n                ]\n            },\n        \
-          \    \"Summary\": {\n                \"rich_text\": [\n                \
-          \    {\n                        \"text\": {\n                          \
-          \  \"content\": arg2\n                        }\n                    }\n\
-          \                ]\n            },\n            \"URL\": {\n           \
-          \     \"url\": arg5\n            },\n            \"ExecutedDate\": {\n \
-          \               \"date\": {\n                    \"start\": arg6\n     \
-          \           }\n            },\n            \"Relation\":{\n            \
-          \    \"relation\":[\n                    {\n                        \"id\"\
-          :Notion_Master_DB_ID\n                    }\n                ]\n       \
-          \         \n            }            \n        },\n        \"children\"\
-          :children\n        \n    }\n\n    return {'result': json.dumps(json_data,\
+        code: "def main(arg1: str, arg2: str, arg3: str, arg5: str, arg6: str, Notion_database_ID:\
+          \ str, Notion_Master_DB_ID: str) -> dict:\n    children = []\n    children.append({\"\
+          object\": 'block', \"type\": 'heading_1', \"heading_1\": {\"rich_text\"\
+          : [{\"text\": {\"content\": \"要点\"}}]}})\n    children.append({\"object\"\
+          : 'block', \"type\": 'paragraph', \"paragraph\": {\"rich_text\": [{\"text\"\
+          : {\"content\": arg3}}]}})\n\n    json_data = {\n        \"parent\": {\"\
+          database_id\": Notion_database_ID},\n        \"properties\": {\n       \
+          \     \"title\": {\n                \"title\": [\n                    {\n\
+          \                        \"text\": {\n                            \"content\"\
+          : arg1\n                        }\n                    }\n             \
+          \   ]\n            },\n            \"Summary\": {\n                \"rich_text\"\
+          : [\n                    {\n                        \"text\": {\n      \
+          \                      \"content\": arg2\n                        }\n  \
+          \                  }\n                ]\n            },\n            \"\
+          URL\": {\n                \"url\": arg5\n            },\n            \"\
+          ExecutedDate\": {\n                \"date\": {\n                    \"start\"\
+          : arg6\n                }\n            },\n            \"Relation\":{\n\
+          \                \"relation\":[\n                    {\n               \
+          \         \"id\":Notion_Master_DB_ID\n                    }\n          \
+          \      ]\n                \n            }            \n        },\n    \
+          \    \"children\":children\n        \n    }\n\n    return {'result': json.dumps(json_data,\
           \ ensure_ascii=False)}"
         code_language: python3
         desc: ''
@@ -1292,7 +1258,7 @@ workflow:
             children: null
             type: string
         selected: false
-        title: Payload Generation
+        title: Payload Generation - Summary
         type: code
         variables:
         - value_selector:
@@ -1307,10 +1273,6 @@ workflow:
           - '17297580308120'
           - text
           variable: arg3
-        - value_selector:
-          - '1729777611576'
-          - result
-          variable: arg4
         - value_selector:
           - '1729748318556'
           - output
@@ -1330,10 +1292,10 @@ workflow:
       height: 54
       id: '1729762470082'
       position:
-        x: 2638.208427008884
+        x: 2713.8823751653454
         y: -98.42857142857147
       positionAbsolute:
-        x: 2638.208427008884
+        x: 2713.8823751653454
         y: -98.42857142857147
       selected: false
       sourcePosition: right
@@ -1369,91 +1331,11 @@ workflow:
       height: 110
       id: '17297626682050'
       position:
-        x: 2929.6523637227015
-        y: -98.42857142857147
+        x: 2713.8823751653454
+        y: 6.1558716606458574
       positionAbsolute:
-        x: 2929.6523637227015
-        y: -98.42857142857147
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom
-      width: 244
-    - data:
-        context:
-          enabled: false
-          variable_selector: []
-        desc: ''
-        model:
-          completion_params:
-            temperature: 0.1
-          mode: chat
-          name: gemini-1.5-flash-latest
-          provider: google
-        prompt_template:
-        - id: 304b8287-6c96-419d-8521-350ed214396c
-          role: system
-          text: 'You are a professional translator.
-
-            Read the given text and translate it into Japanese without errors or omissions.
-
-            Please be sure to translate the information into easily understandable
-            Japanese.'
-        - id: 384d1547-c00d-413d-952f-27411594b37f
-          role: user
-          text: テキスト：{{#1729728469370.Group1.output#}}
-        selected: false
-        title: LLM - Translate
-        type: llm
-        variables: []
-        vision:
-          enabled: false
-      height: 98
-      id: '17297700943980'
-      position:
-        x: 1975.7568588152756
-        y: 314.4806750358691
-      positionAbsolute:
-        x: 1975.7568588152756
-        y: 314.4806750358691
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom
-      width: 244
-    - data:
-        code: "def main(text: str) -> dict:\n    import re\n    if len(text) > 400:\n\
-          \        #split_text = re.split(r'(?<=。)', text)  # Split at '。' while keeping\
-          \ the delimiter\n\n        split_text = re.split(r'(?<=。|\\n)', text)  #\
-          \ Split at '。' or newline while keeping the delimiter        \n        \n\
-          \        result = []\n        current_chunk = \"\"\n        for sentence\
-          \ in split_text:\n            if len(current_chunk) + len(sentence) > 400:\n\
-          \                result.append(current_chunk)\n                current_chunk\
-          \ = sentence\n            else:\n                current_chunk += sentence\n\
-          \        if current_chunk:\n            result.append(current_chunk)\n \
-          \       return {'result': result}\n    return {'result': [text]}"
-        code_language: python3
-        desc: ''
-        outputs:
-          result:
-            children: null
-            type: array[string]
-        selected: false
-        title: Output Splitter
-        type: code
-        variables:
-        - value_selector:
-          - '17297700943980'
-          - text
-          variable: text
-      height: 54
-      id: '1729777611576'
-      position:
-        x: 2293.2219536431116
-        y: 314.4806750358691
-      positionAbsolute:
-        x: 2293.2219536431116
-        y: 314.4806750358691
+        x: 2713.8823751653454
+        y: 6.1558716606458574
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -1476,10 +1358,10 @@ workflow:
       height: 54
       id: '1729785130564'
       position:
-        x: 2301.6523637227015
+        x: 1946.958244051578
         y: -98.42857142857147
       positionAbsolute:
-        x: 2301.6523637227015
+        x: 1946.958244051578
         y: -98.42857142857147
       selected: false
       sourcePosition: right
@@ -1586,7 +1468,7 @@ workflow:
       positionAbsolute:
         x: 257.2277171769647
         y: 526.0484378041743
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -1614,7 +1496,77 @@ workflow:
       targetPosition: left
       type: custom
       width: 244
+    - data:
+        code: "def main(arg1: str) -> dict:\n    data = json.loads(arg1)\n    id_value\
+          \ = data[\"id\"]\n    url = data[\"public_url\"]\n    id_without_hyphens\
+          \ = id_value.replace('-', '')\n\n    target = \"https://api.notion.com/v1/blocks/\"\
+          \ + id_without_hyphens + \"/children\"\n\n    return {'result': target,\
+          \ 'url': url}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+          url:
+            children: null
+            type: string
+        selected: false
+        title: Get Created ID
+        type: code
+        variables:
+        - value_selector:
+          - '17297626682050'
+          - body
+          variable: arg1
+      height: 54
+      id: '1729903735210'
+      position:
+        x: 2713.8823751653454
+        y: 166.54307804134316
+      positionAbsolute:
+        x: 2713.8823751653454
+        y: 166.54307804134316
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: 64e6d705-427e-4066-9ad2-aaecad6b1533
+        provider_name: WholeTranslation
+        provider_type: workflow
+        selected: false
+        title: WholeTranslation
+        tool_configurations: {}
+        tool_label: WholeTranslation
+        tool_name: WholeTranslation
+        tool_parameters:
+          InputText:
+            type: mixed
+            value: '{{#1729728469370.Group1.output#}}'
+          MasterPageID:
+            type: mixed
+            value: '{{#env.Notion_Master_DB_ID#}}'
+          OutputParentURL:
+            type: mixed
+            value: '{{#1729903735210.result#}}'
+        type: tool
+      height: 54
+      id: '1729962385382'
+      position:
+        x: 2713.8823751653454
+        y: 265.0646548645189
+      positionAbsolute:
+        x: 2713.8823751653454
+        y: 265.0646548645189
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
     viewport:
-      x: -1340.72002146256
-      y: 457.80380434230784
-      zoom: 0.7578582832552
+      x: -1130.5375104620075
+      y: 608.2889028105045
+      zoom: 0.659753955386448
