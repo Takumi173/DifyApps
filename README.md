@@ -19,3 +19,11 @@
 ### 機能
  * DifyAppに入力したファイルまたはURLからテキストを取得し、要約と翻訳結果をNotionに送ります。
  * Webサイトによってはテキストが取得できないこともあります。
+
+## WholeTranslation
+### URLs
+ * [入力先（Dify Web App）](https://udify.app/workflow/Zzw17wlR8GML01Sn)（[DSL(yml)ファイル](https://github.com/Takumi173/DifyApps/blob/main/WholeTranslation.yml)）
+
+### 機能
+ * ファイルまたはURLのテキストの全文翻訳結果を、指定のNotionページに返します。
+ * TransNoterの一部として構成しています。入力画面はありますが、単体での使用は想定しません。
